@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <style>
+
+  
+   a{
+     margin-top: 100px;
+     margin-left: 300px; 
+     color:blueviolet
+     }
+
+   .canvas {
+     background-image: url("img/6.jpg");
+     background-size: cover;
+     width: 2000px;
+     height:1000px;
+     text-align: center;
+   }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      width: 190px;
+      height: 190px;
+    }
+
+    .button:hover {
+      background-color:transparent;
+    }
+
+    .item {
+      width: 200px;
+      height: 200px;
+      margin-top: 700px;
+      margin-left: 300px;
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20%;
+
+    }
+
+    .item:hover {
+      animation: rotate 30s infinite;
+    }
+
+    .item1:hover {
+      animation: rotate 30s infinite;
+    }
+
+   @keyframes rotate{
+     50%{transform: rotate(360deg)};
+   }
+    
+    .item1 {
+      width: 200px;
+      height: 200px;
+      margin-top: 700px;
+      margin-left: 600px;
+    }
+
+    .item1 img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20%;
+
+    }
+
+   h4 {
+     position: absolute;
+     margin-top: 50%;
+     margin-left: 50%;
+   }
+
+   .text{
+     position: absolute;
+     top: 30%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: yellow;
+     font-size: 200%;
+   }
+    
+    </style>
+    <script src="libs/howler.js"></script>
+    <title>Lofi world</title>
+</head>
+
+<body>
+
+  <audio autoplay loop>
+    <source src="lofi/inYourArms.mp3" type="">
+    </audio>
+
+  <nav>
+
+      <a href="page2.html">Go for A Ride?</a>
+      <a href="index.html">Sun Set</a>
+      <a href="page3.html">HOME SWEET HOME</a>
+
+
+  </nav>
+
+  
+<div class="canvas">
+  <div class="container">
+      <div class="text ">Every Sound Is Music!!!</div>
+
+    <div class="button" onclick="playSound(sound0)">
+      <div class="item">
+          <img src="img/7.jpg">
+      </div>
+    </div> 
+     
+    
+    <div class="button" onclick="playSound(sound1)">
+      <div class="item1">
+          <img src="img/4.jpg">
+      </div>
+    </div>
+
+  </div>
+</div>
+ 
+<script>
+   const sound0 = new Howl({ src:'lofi/CarEngine.mp3'})
+   const sound1 = new Howl({ src:'lofi/coffee.mp3'})
+
+ console.log(sound0)
+ const playSound= (sound) => {
+   sound.play();
+ }
+
+</script>
+     
+    
+  
+</body>
+
+
+</html>
